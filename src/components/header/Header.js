@@ -33,7 +33,7 @@ function Header({ category, setcategory, word, setWord, LightMode }) {
             className="search"
             id="standard-basic"
             label="Search a Word"
-            label="Standard"
+            // label="Standard"
             value={word}
             onChange={e=>setWord(e.target.value)}
           />
