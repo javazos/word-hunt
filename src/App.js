@@ -25,6 +25,7 @@ const [LightMode, setLightMode] = useState(false)
     checked:{},
     track:{}
   })(Switch);
+  
   const dictionaryApi = async () => {
     try{
       const data = await axios.get(
@@ -38,9 +39,14 @@ const [LightMode, setLightMode] = useState(false)
 
   // console.log(meanings);
 
-  useEffect(() => {
-    dictionaryApi();
-  }, [word, category ])
+  useEffect(() => {     
+    dictionaryApi(); 
+    // eslint-disable-next-line
+    }, [word, category ]);
+
+
+
+
   return (
     <div className="App" 
          style={{
